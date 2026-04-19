@@ -5,8 +5,8 @@ import { parsePark } from "../lib/parse-park.js";
 
 export function registerGetPark(server: McpServer) {
   server.tool(
-    "get-park",
-    "Get full details for an amusement park by its RCDB numeric ID, including its complete roller coaster roster (operating and defunct). Use search-coasters with a query to find a park's ID first.",
+    "rcdb-get-park",
+    "Get full details for an amusement park by its RCDB numeric ID, including its complete roller coaster roster (operating and defunct). Use rcdb-search-coasters with a query to find a park's ID first.",
     { id: z.number().int().positive().describe("RCDB numeric park ID (from the URL, e.g. 4529 for Cedar Point)") },
     async ({ id }) => {
       try {

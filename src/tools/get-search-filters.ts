@@ -35,7 +35,7 @@ function parseYearSelect(html: string, name: string): number[] {
 
 export function registerGetSearchFilters(server: McpServer) {
   server.tool(
-    "get-search-filters",
+    "rcdb-get-search-filters",
     `Returns the full catalog of filterable values available in the RCDB coaster search form. Use the returned IDs directly with search-coasters parameters.
 
 Returns:

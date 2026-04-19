@@ -5,12 +5,12 @@ import { parseLocation } from "../lib/parse-location.js";
 
 export function registerGetLocation(server: McpServer) {
   server.tool(
-    "get-location",
+    "rcdb-get-location",
     `Browse the RCDB location hierarchy. Fetches a location page and returns its name, breadcrumb path, coaster/park counts, and child locations with their IDs.
 
 Use id=0 (or omit) to start at the World root. Then drill down using the child location IDs returned.
 
-Each child has an \`extantCoasters\` count (null means zero or unknown). Use the child \`id\` with \`search-coasters\` (locationId parameter) to list coasters in that region.
+Each child has an \`extantCoasters\` count (null means zero or unknown). Use the child \`id\` with \`rcdb-search-coasters\` (locationId parameter) to list coasters in that region.
 
 Typical workflow:
 1. Call get-location with no id → get world countries

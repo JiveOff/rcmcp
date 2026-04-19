@@ -50,11 +50,11 @@ const CLASSIFICATION_ID: Record<string, number> = {
 
 export function registerSearchCoasters(server: McpServer) {
   server.tool(
-    "search-coasters",
+    "rcdb-search-coasters",
     `Search roller coasters on RCDB with filters and sorting. Returns a paginated list of coasters.
 
-Call get-search-filters first when you need a manufacturerId, or when the user asks about a specific element, category, layout, or designer — that tool returns the full list of valid IDs for those fields.
-Call get-location first when you need a locationId for a country or region by name.
+Call rcdb-get-search-filters first when you need a manufacturerId, or when the user asks about a specific element, category, layout, or designer — that tool returns the full list of valid IDs for those fields.
+Call rcdb-get-location first when you need a locationId for a country or region by name.
 
 Parameters:
 - query: text search across name and related fields

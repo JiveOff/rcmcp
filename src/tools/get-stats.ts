@@ -3,7 +3,7 @@ import { fetchPage } from "../lib/fetch.js";
 
 export function registerGetStats(server: McpServer) {
   server.tool(
-    "get-stats",
+    "rcdb-get-stats",
     "Returns global RCDB database statistics: total number of roller coasters, amusement parks, pictures, and videos tracked in the database.",
     {},
     async () => {

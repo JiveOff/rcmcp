@@ -5,7 +5,7 @@ import { parseCoaster } from "../lib/parse-coaster.js";
 
 export function registerGetCoaster(server: McpServer) {
   server.tool(
-    "get-coaster",
+    "rcdb-get-coaster",
     "Get full details for a single roller coaster by its RCDB numeric ID. Returns name, park, location, status, type, design, manufacturer, stats (height, speed, drop, length, inversions), elements (the ordered list of track elements), and more.",
     { id: z.number().int().positive().describe("RCDB numeric coaster ID (from the URL, e.g. 594 for Millennium Force)") },
     async ({ id }) => {
